@@ -73,3 +73,19 @@ fi
 
 **Exercice 4**
 Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si lescript est appelé sans nom d’utilisateur, il aﬀiche le message : ”Utilisation :nom_du_scriptnom_utilisateur”,oùnom_du_scriptest le nom de votre script récupéré automatiquement (si vous changez le nom de votrescript, le message doit changer automatiquement)
+
+  GNU nano 4.3                        exo4.sh                                   
+#!/bin/bash
+
+if [ -z "$1" ] ; then
+ echo "Utilisation :$(basename $0) nom_utilisateur"
+ 
+//id renvoit l'ensemble des informations sur les utilisateurs , si on lui passe un parametre il renvoit un boolean 0 nexiste pas 1 existe; La suite de la commande permet d'éviter d'affichier id 'nomuser' qui est une longue ligne
+elif id "$1" > /dev/null 2>&1 ; then
+        echo  "Exist"
+else
+        echo "incorrect"
+fi
+
+**Exercice 5**
+Ecrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera quel’utilisateur saisit toujours un entier naturel)
