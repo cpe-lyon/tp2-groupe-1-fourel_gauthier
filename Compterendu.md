@@ -1,4 +1,4 @@
-*Exercice 1*
+**Exercice 1**
 
 1- Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur?
 printenv PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -39,7 +39,37 @@ Unset permet de supprimer une valeur tandis que si on affecte une chaine vide à
 10.Utilisez la commande echo pour écrire exactementla phrase :$HOME =chemin(où chemin est votredossier personneld’après bash)
 echo '$HOME =' $HOME
 
-Exercice 2
-Ecrivez un script testpwd.shqui demande de saisir un mot de passe et vérifie s’il correspond ou non aucontenu 
-d’une variablePASSWORDdont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur 
+**Exercice 2**
+Ecrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non aucontenu 
+d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur 
 ne doit pas s’aﬀicher.
+
+#!/bin/bash
+
+PASSWORD="Test"
+read -p "Saisissez un mot de passe" -s pssw
+
+if [ $pssw="Test" ]; then
+echo "Mot de passe correct "
+else 
+echo "Mot de passe incorrect"
+
+
+**Exercice 3**
+Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :
+Il aﬀichera un message d’erreur dans le cas contraire
+
+#!/bin/bash
+function is_number()
+{re='^[+-]?[0-9]+([.][0-9]+)?$'if ! [[ $1 =~ $re ]] ; 
+then return 1
+else return 0
+fi}
+if is_number $1 ; then
+        echo "correct"
+else
+        echo "incorrect"
+fi
+
+**Exercice 4**
+Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si lescript est appelé sans nom d’utilisateur, il aﬀiche le message : ”Utilisation :nom_du_scriptnom_utilisateur”,oùnom_du_scriptest le nom de votre script récupéré automatiquement (si vous changez le nom de votrescript, le message doit changer automatiquement)
