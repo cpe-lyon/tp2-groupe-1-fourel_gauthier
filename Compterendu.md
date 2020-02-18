@@ -89,3 +89,50 @@ fi
 
 **Exercice 5**
 Ecrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera quel’utilisateur saisit toujours un entier naturel)
+
+#!/bin/bash
+
+factorielle()
+{
+
+        n=$1
+        if [ $n -eq 0 ] ;then
+                echo 1
+        else
+                echo $((n*$factorielle $((n-1))))
+        fi
+}
+
+echo "Le resultat est $(factorielle $1)"
+
+**Exercice 6**
+Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner.Le programme écrira ”C’est plus!”, ”C’est moins!” ou ”Gagné!” selon les cas (vous utiliserez$RANDOM).
+
+#!/bin/bash
+
+MAXIMUM=1000
+MINIMUM=1
+VAL=$((MINIMUM+RANDOM*(1+MAXIMUM-MINIMUM)/32767))
+// echo $VAL
+res=enCours
+while [ "$res" != "Gagné" ]; do
+        read -p "Donnez une valeur" num
+        if [ $num = $VAL ] ; then
+                echo "C'est gagné"
+                res="Gagné"
+        elif [ $num -gt $VAL ] ; then
+                echo "Trop grand"
+        else
+                echo "Trop petit"
+        fi
+done
+
+**Exercice 7**
+1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le maxet la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètressont bien des entiers.
+2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)
+3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.
+
+
+
+
+
