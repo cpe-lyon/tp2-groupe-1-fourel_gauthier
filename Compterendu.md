@@ -49,10 +49,10 @@ echo '$HOME =' $HOME
 d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur 
 ne doit pas s’aﬀicher.*
 
-`#!/bin/bash`
+```#!/bin/bash
 
-`PASSWORD="Test"
-read -p "Saisissez un mot de passe" -s pssw`
+PASSWORD="Test"
+read -p "Saisissez un mot de passe" -s pssw```
 
 if [ $pssw="Test" ]; then
 echo "Mot de passe correct "
