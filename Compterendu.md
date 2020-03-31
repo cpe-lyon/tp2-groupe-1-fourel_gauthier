@@ -54,18 +54,18 @@ ne doit pas s’aﬀicher.*
 
 PASSWORD="Test"
 read -p "Saisissez un mot de passe" -s pssw
-```
 
 if [ $pssw="Test" ]; then
 echo "Mot de passe correct "
 else 
 echo "Mot de passe incorrect"
+```
 
+## Exercice 3
+*Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :
+Il aﬀichera un message d’erreur dans le cas contraire*
 
-**Exercice 3**
-Ecrivez un script qui prend un paramètre et utilise la fonction suivante pour vérifier que ce paramètreest un nombre réel :
-Il aﬀichera un message d’erreur dans le cas contraire
-
+```
 #!/bin/bash
 function is_number()
 {re='^[+-]?[0-9]+([.][0-9]+)?$'if ! [[ $1 =~ $re ]] ; 
@@ -77,10 +77,12 @@ if is_number $1 ; then
 else
         echo "incorrect"
 fi
+```
 
-**Exercice 4**
-Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si lescript est appelé sans nom d’utilisateur, il aﬀiche le message : ”Utilisation :nom_du_scriptnom_utilisateur”,oùnom_du_scriptest le nom de votre script récupéré automatiquement (si vous changez le nom de votrescript, le message doit changer automatiquement)
+## Exercice 4
+*Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si lescript est appelé sans nom d’utilisateur, il aﬀiche le message : ”Utilisation :nom_du_scriptnom_utilisateur”,oùnom_du_scriptest le nom de votre script récupéré automatiquement (si vous changez le nom de votrescript, le message doit changer automatiquement)*
 
+```
   GNU nano 4.3                        exo4.sh                                   
 #!/bin/bash
 
@@ -93,10 +95,12 @@ elif id "$1" > /dev/null 2>&1 ; then
 else
         echo "incorrect"
 fi
+```
 
-**Exercice 5**
-Ecrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera quel’utilisateur saisit toujours un entier naturel)
+## Exercice 5
+*Ecrivez un programme qui calcule la factorielle d’un entier naturel passé en paramètre (on supposera quel’utilisateur saisit toujours un entier naturel)*
 
+```
 #!/bin/bash
 
 factorielle()
@@ -133,8 +137,9 @@ while [ "$res" != "Gagné" ]; do
                 echo "Trop petit"
         fi
 done
+```
 
-**Exercice 7**
+## Exercice 7
 1.Écrivez un script qui prend en paramètres trois entiers (entre -100 et +100) et aﬀiche le min, le maxet la moyenne. Vous pouvez réutiliser la fonction de l’exercice 3 pour vous assurer que les paramètressont bien des entiers.
 2.Généralisez le programme à un nombre quelconque de paramètres (pensez àSHIFT)
 3.Modifiez votre programme pour que les notes ne soient plus données en paramètres, mais saisies etstockées au fur et à mesure dans un tableau.
