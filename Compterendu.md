@@ -3,12 +3,6 @@
  
 # Compte rendu TP2
 
-
-## Prise en main de l’interpréteur de commandes --> Navigation dans l’arborescence des fichiers 
-
-### 1. allez dans le dossier /var/log** 
-Dossier var/log --> cd /var/log
-
 ## Exercice 1
 
 ### 1- Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur?
@@ -51,14 +45,14 @@ Unset permet de supprimer une valeur tandis que si on affecte une chaine vide à
 echo '$HOME =' $HOME
 
 ## Exercice 2
-Ecrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non aucontenu 
+*Ecrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non aucontenu 
 d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur 
-ne doit pas s’aﬀicher.
+ne doit pas s’aﬀicher.*
 
-#!/bin/bash
+`#!/bin/bash`
 
-PASSWORD="Test"
-read -p "Saisissez un mot de passe" -s pssw
+`PASSWORD="Test"`
+`read -p "Saisissez un mot de passe" -s pssw`
 
 if [ $pssw="Test" ]; then
 echo "Mot de passe correct "
