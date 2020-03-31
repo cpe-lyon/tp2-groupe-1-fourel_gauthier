@@ -51,8 +51,8 @@ ne doit pas s’aﬀicher.*
 
 `#!/bin/bash`
 
-`PASSWORD="Test"`
-`read -p "Saisissez un mot de passe" -s pssw`
+`PASSWORD="Test"
+read -p "Saisissez un mot de passe" -s pssw`
 
 if [ $pssw="Test" ]; then
 echo "Mot de passe correct "
