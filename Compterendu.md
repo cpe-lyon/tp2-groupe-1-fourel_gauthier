@@ -6,13 +6,13 @@
 
 ## Prise en main de l’interpréteur de commandes --> Navigation dans l’arborescence des fichiers 
 
-**1. allez dans le dossier /var/log** 
-> Dossier var/log --> cd /var/log
+### 1. allez dans le dossier /var/log** 
+Dossier var/log --> cd /var/log
 
 ## Exercice 1
 
 ### 1- Dans quels dossiers bash trouve-t-il les commandes tapées par l’utilisateur?
-**printenv PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin**
+printenv PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 **2-Quelle variable d’environnement permet à la commande cd tapée sans argument de vous ramener dans votre répertoire personnel?**
 cd $HOME
